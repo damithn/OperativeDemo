@@ -1,0 +1,15 @@
+server:
+  port: 8191
+#configuration are stores in locally
+#spring:
+#  profiles:
+#    active : native
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/damithn/spring-cloud-config-store
+          search-paths:
+            - '*service'
